@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:7.4-apache
+    container_name: php_container
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src:/var/www/html/
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:5.7
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db_name'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'rootpassword'
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+
