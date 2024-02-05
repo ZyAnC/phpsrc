@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 <?php 
-echo "你好，世界！ ";
+echo "hello，world! ";
 ?>
 <?php include 'ex3.php'; ?>
 <?php include 'footer.php'; ?>
