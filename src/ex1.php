@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php include 'header.php'; ?>
     <title>Exercise 1: Getting Started with PHP - YourFirstName</title>
 </head>
 <body>
@@ -50,4 +51,4 @@ echo "<table border='1'>
 
 </body>
 </html>
-
+<?php include 'foot.php'; ?>

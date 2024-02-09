@@ -6,20 +6,11 @@
     <title>Exercise 3</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<?php include 'header.php'; ?>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">My Site</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="ex3.php">Exercise 3</a>
-                </li>
-                <!-- Add other links here -->
-            </ul>
-        </div>
-    </nav>
+   
 
     <!-- Form Creation -->
     <div class="container mt-4">
@@ -72,19 +63,10 @@
     ?>
 
     <!-- File Modification Time in Footer -->
-    <footer class="footer mt-4 py-3 bg-light">
-        <div class="container text-center">
-            <?php
-            $filename = basename($_SERVER['SCRIPT_FILENAME']);
-            $modTime = filemtime($filename);
-            echo "<p>Last modified: " . date("F d Y H:i:s.", $modTime) . "</p>";
-            ?>
-        </div>
-    </footer>
+   
 
     <!-- Optional JavaScript and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-

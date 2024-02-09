@@ -31,7 +31,7 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-</form>
+	<a href ='read.php'>READ</form>
 <?php
 // Check if the 'submit' button in the form was clicked
 if (isset($_POST['submit'])) {
@@ -42,10 +42,21 @@ if (isset($_POST['submit'])) {
     $groupid = $_POST['groupid']; // Group ID
 
     // Include the database connection file
-    include 'db.php';
+  $servername = "localhost"; // Replace with your MySQL server hostname
+$username = "zheng23001";     // Replace with your MySQL username
+$password = "56X9VqV9";     // Replace with your MySQL password
+$dbname = "wp_zheng23001";       // Replace with the name of your MySQL database
+
+// Create a database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
     // Define an SQL query to insert data into the 'studentsinfo' table
-    $sql = "INSERT INTO studentsinfo (fname, lname, city, groupid)
+    $sql = "INSERT INTO studentsinfo (first_name, last_name, city, groupid)
             VALUES ('$fname', '$lname', '$city', '$groupid')";
 
     // Execute the SQL query using the database connection

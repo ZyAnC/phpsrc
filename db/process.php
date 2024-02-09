@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $groupid = $_POST['groupid']; // Group ID
 
     // Include the database connection file
-    include 'db.php';
+    include './db.php';
 
     // Define an SQL query to insert data into the 'studentsinfo' table
     $sql = "INSERT INTO studentsinfo (fname, lname, city, groupid)

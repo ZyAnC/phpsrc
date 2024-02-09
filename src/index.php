@@ -2,5 +2,5 @@
 <?php 
 echo "hello，world! ";
 ?>
-<?php include 'ex3.php'; ?>
-<?php include 'footer.php'; ?>
+
+<?php include 'foot.php'; ?>

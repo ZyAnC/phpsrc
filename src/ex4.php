@@ -1,12 +1,4 @@
-<?php
-// Start of PHP Tag
-
-// Layout and Navigation Bar (Assuming you already have a layout to include)
-include('layout.php'); // Include your standard layout/header file
-echo '<nav>...</nav>'; // Navigation bar code here, add a link to ex4.php
-
-?>
-
+<?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,6 +78,9 @@ foreach($myarray as $element) {
     echo "$element<br>";
 }
 ?>
+<?php include 'foot.php'; ?>
 
 </body>
 </html>
+
+
